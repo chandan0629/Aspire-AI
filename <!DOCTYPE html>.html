@@ -1,0 +1,263 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamified Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add your existing styles here, plus the new styles from above */
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+        }
+
+        .login-container {
+            width: 300px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.1s; /* Smooth transition for movement */
+        }
+
+        .logo {
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        .login-form input:focus {
+            outline: none;
+            border: 2px solid #28a745; /* Green border on focus */
+            box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Glow effect */
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition : background-color 0.3s, transform 0.2s;
+        }
+
+        .login-form button:hover {
+            background-color: #218838; /* Darker green on hover */
+            transform: scale(1.05); /* Slightly enlarge the button */
+        }
+
+        .social-login button {
+            margin: 5px 0;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+
+        .social-login button:hover {
+            transform: scale(1.05); /* Slightly enlarge social buttons on hover */
+        }
+
+        .forgot-password, .signup {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .forgot-password:hover, .signup:hover {
+            color: #ffc107;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <header>
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>Level Up Your Career!</h1>
+        </header>
+        <form class="login-form">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <div class="social-login">
+                <button class="google">Login with Google</button>
+                <button class="facebook">Login with Facebook</button>
+                <button class="github">Login with GitHub</button>
+            </div>
+            <a href="#" class="forgot-password">Lost your keys?</a>
+            <p>New here? <a href="#" class="signup">Join the Adventure!</a></p>
+        </form>
+        <footer>
+            <p>&copy; 2023 Your Company. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const loginContainer = document.querySelector('.login-container');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            // Apply a slight transformation based on mouse position
+            loginContainer.style.transform = `translate(-${x * 5}px, -${y * 5}px)`;
+        });
+
+        document.addEventListener('mouseleave', () => {
+            const loginContainer = document.querySelector('.login-container');
+            loginContainer.style.transform = 'translate(0, 0)'; // Reset position when mouse leaves
+        });
+    </script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamified Login</title>
+    <style>
+        body {
+            background-color: #28a745; /* Green background */
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            height: 100vh; /* Full height */
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            margin: 0; /* Remove default margin */
+        }
+
+        .login-container {
+            width: 300px;
+            background: rgba(13, 1, 1, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(210, 241, 2, 0.5);
+            text-align: center; /* Center text inside */
+            transition: transform 0.1s; /* Smooth transition for movement */
+        }
+
+        .logo {
+            width: 100px;
+            display: block;
+            margin: 0 auto 20px; /* Center logo and add margin */
+        }
+
+        h1 {
+            margin-bottom: 20px; /* Add margin below the heading */
+        }
+
+        .login-form input {
+            width: 95%;
+            padding: 8px;
+            align-items: center;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        .login-form input:focus {
+            outline: none;
+            border: 2px solid #07fbff; /* Yellow border on focus */
+            box-shadow: 0 0 10px rgba(255, 193, 7, 0.5); /* Glow effect */
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background: #078fff; /* Yellow background */
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Added box-shadow transition */
+        }
+
+        .login-form button:hover {
+            background-color: #e0a800; /* Darker yellow on hover */
+            transform: scale(1.05); /* Slightly enlarge the button */
+            box-shadow: 0 0 10px rgba(255, 193, 7, 0.8); /* Glow effect on hover */
+        }
+
+        .social-login button {
+            margin: 5px 0;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            transition: transform 0.2s, box-shadow 0.3s; /* Added box-shadow transition */
+        }
+
+        .social-login button:hover {
+            transform: scale(1.05); /* Slightly enlarge social buttons on hover */
+            box-shadow: 0 0 10px rgba(255, 193, 7, 0.5); /* Glow effect on hover */
+        }
+
+        .forgot-password, .signup {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .forgot-password:hover, .signup:hover {
+            color: #ffc107;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <header>
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>Level Up Your Career!</h1>
+        </header>
+        <form class="login-form">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <div class="social-login">
+                <button class="google">Login with Google</button>
+                <button class="facebook">Login with Facebook</button>
+                <button class="github">Login with GitHub</button>
+            </div>
+            <a href="#" class="forgot-password">Lost your keys?</a>
+            <p>New here? <a href="#" class="signup">Join the Adventure!</a></p>
+        </form>
+        <footer>
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html> 
+
